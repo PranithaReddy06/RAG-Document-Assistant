@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+     <div class="container">
+        <h1>My RAG Assistant</h1>
+
+        <input type="text" name="question" id="question"
+               placeholder="Ask about your resume">
+        <button type="button" onclick="askQuestion()">Ask</button>
+
+        <label for="pdfSelect">Select a PDF to chat with:</label>
+        <select id="pdfSelect">
+            <option value="">Upload a PDF first</option>
+        </select>
+        
+        <div id="answer"></div>
+
+        <section class="upload-section">
+            <h3>Upload a PDF</h3>
+            <input type="file" id="pdfFile"
+                   accept=".pdf,application/pdf">
+            <button type="button" onclick="uploadPDF(event)">Upload PDF</button>
+            <p id="uploadStatus" role="status"></p>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
